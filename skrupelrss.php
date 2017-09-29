@@ -14,11 +14,10 @@
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 
+
 //////////////////////
 // Teil 1: Globales //
 //////////////////////
-
-include '../../inc.conf.php';
 
 $rss_root = "http://" . $_SERVER['SERVER_NAME'] . substr($_SERVER['SCRIPT_NAME'],0,-25);
 $rss_pubdate = date("D, d M Y H:i:s O");
@@ -30,8 +29,9 @@ $rss_user = array();
 $rss_error_start = "<html><head><title>Skrupel: RSS-Rundenstatus [[Fehler]]</title></head><body>";
 $rss_error_ende = "</body></html>";
 
-$rss_conn = @mysql_connect("$db_server","$db_login","$db_password");
-$rss_db = @mysql_select_db("$db_name",$rss_conn);
+include (dirname(__FILE__).'/../../inc.conf.php');
+include (dirname(__FILE__).'/../../inhalt/inc.hilfsfunktionen.php');
+$rss_db = open_db();
 
 if ($rss_db) {
 /*start: if ($rss_db)*/
