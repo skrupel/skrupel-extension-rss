@@ -22,4 +22,4 @@ Das ZIP-Archiv muss einfach in das Verzeichnis `skrupel/extend/rss` entpackt wer
 Benutzung
 ---------
 
-Rufe einfach die URL `http://SKRUPEL_HOST/extend/rss/skrupelrss.php?name=DEIN_SKRUPEL_USERNAME` im Browser auf.
+Rufe einfach die URL `http://SKRUPEL_HOST/extend/rss/runden.xml.php?name=DEIN_SKRUPEL_USERNAME` im Browser auf.
